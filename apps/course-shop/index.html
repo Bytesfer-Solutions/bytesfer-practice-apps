@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bytesfer Course Shop (practice)</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header>
+  <a class="brand" href="#/" data-testid="brand">Bytesfer Course Shop</a>
+  <nav aria-label="Main">
+    <a href="#/" data-testid="nav-courses">Courses</a>
+    <a href="#/cart" data-testid="nav-cart">Cart (<span id="cart-count" data-testid="cart-count">0</span>)</a>
+    <a href="#/orders" data-testid="nav-orders">My orders</a>
+    <a href="#/login" id="nav-login" data-testid="nav-login">Log in</a>
+    <button type="button" id="nav-logout" data-testid="nav-logout" hidden>Log out</button>
+  </nav>
+  <p class="who" id="who" data-testid="user-name" hidden></p>
+</header>
+<main id="main" tabindex="-1"></main>
+<footer>
+  <p>Practice shop, test payments only. Shop clock: <strong id="shop-clock" data-testid="shop-clock">...</strong></p>
+  <div class="controls">
+    <button type="button" id="clock-15m" data-testid="clock-plus-15m">+15 min</button>
+    <button type="button" id="clock-1d" data-testid="clock-plus-1d">+1 day</button>
+    <button type="button" id="reset-shop" data-testid="reset-shop">Reset shop</button>
+  </div>
+</footer>
+<script src="app.js"></script>
+</body>
+</html>

@@ -5,7 +5,7 @@ Each app lives in its own folder under `apps/` and runs in the browser, with no 
 
 ## Apps
 
-- `apps/course-shop/` (coming soon): the Course Shop, a small course store with a cart, coupons, a test checkout,
+- `apps/course-shop/` (available): the Course Shop, a small course store with a cart, coupons, a test checkout,
   login and "My orders". Used by the Bytesfer course Test Design and QA Foundations.
 
 ## Using an app
@@ -15,4 +15,4 @@ Test only the practice apps in this repository, not third-party sites.
 
 ## Licence
 
-MIT (see LICENSE when the first app is added).
+MIT (see LICENSE).
