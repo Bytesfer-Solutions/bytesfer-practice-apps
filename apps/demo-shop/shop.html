@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Demo Shop</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <h1>Demo Shop</h1>
+    <ul id="courses">
+      <li data-price="999"><span>pytest for Testers</span> <span>₹999</span> <button type="button">Add pytest for Testers</button></li>
+      <li data-price="999"><span>API Testing with Python</span> <span>₹999</span> <button type="button">Add API Testing with Python</button></li>
+      <li data-price="0"><span>Python for Beginners</span> <span>Free</span> <button type="button">Add Python for Beginners</button></li>
+    </ul>
+    <p>Cart: <span id="cart-count">0</span> course(s)</p>
+    <button type="button" id="to-checkout">Checkout</button>
+
+    <section id="checkout" hidden>
+      <h2>Checkout</h2>
+      <p>Total: ₹<span id="total">0</span></p>
+      <button type="button" id="pay">Pay now</button>
+      <p id="status" role="status"></p>
+    </section>
+  </main>
+  <script>
+    // Practice shop: made-up courses, no real payment.
+    let count = 0;
+    let total = 0;
+    document.querySelectorAll("#courses li").forEach((item) => {
+      item.querySelector("button").addEventListener("click", () => {
+        count += 1;
+        total += Number(item.dataset.price);
+        document.getElementById("cart-count").textContent = count;
+      });
+    });
+    document.getElementById("to-checkout").addEventListener("click", () => {
+      document.getElementById("total").textContent = total.toLocaleString("en-IN");
+      document.getElementById("checkout").hidden = false;
+    });
+    document.getElementById("pay").addEventListener("click", () => {
+      document.getElementById("status").textContent = "Payment received";
+    });
+  </script>
+</body>
+</html>

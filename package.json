@@ -1,0 +1,11 @@
+{
+  "name": "bytesfer-practice-apps-tests",
+  "private": true,
+  "description": "Demo Playwright suite for the Bytesfer practice apps",
+  "scripts": {
+    "test": "playwright test"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.65.0"
+  }
+}
