@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Demo Shop: Log in</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <h1>Log in</h1>
+    <form id="login">
+      <label for="email">Email</label>
+      <input id="email" type="email" autocomplete="username">
+      <label for="password">Password</label>
+      <input id="password" type="password" autocomplete="current-password">
+      <button type="submit">Log in</button>
+    </form>
+    <p id="message" role="alert"></p>
+  </main>
+  <script>
+    // Practice login with made-up details: meera@example.com / learn-123
+    document.getElementById("login").addEventListener("submit", (event) => {
+      event.preventDefault();
+      const email = document.getElementById("email").value.trim();
+      const password = document.getElementById("password").value;
+      if (email === "meera@example.com" && password === "learn-123") {
+        document.querySelector("main").innerHTML = '<h1>Welcome, Meera</h1><p><a href="shop.html">Go to the demo shop</a></p>';
+      } else {
+        document.getElementById("message").textContent = "Wrong email or password.";
+      }
+    });
+  </script>
+</body>
+</html>
